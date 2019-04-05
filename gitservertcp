@@ -1,6 +1,7 @@
 import socket
 import ujson
 
+<<<<<<< HEAD
 
 s1=socket.socket()
 print("socket created in server side")
@@ -8,6 +9,14 @@ port= 1200
 s1.bind(('',port) )
 print("socket binded to the port 1200")
 s1.listen()
+=======
+s=socket.socket()
+print("socket created")
+port= 3000
+s.bind(('',port) )
+print("socket binded to the port 3000")
+s.listen()
+>>>>>>> a2b4176c91205838722358766886286aac42e2bf
 
 while True:
     c, addr =s1.accept()
