@@ -4,14 +4,12 @@ import ujson
 s=socket.socket()
 port= 1200
 
-s.connect( ('127.0.0.1' , port) )
+s.connect( ('192.168.1.204' , port) )
 print("connecting to {}:{}".format('127.0.0.1' , port))
 s.send(ujson.dumps('12').encode('utf-8'))
 d = ujson.loads(s.recv(1024).decode('utf-8'))  
 print("received {} ".format(d))
 print("Thank you")
-print("Git merge")
 
-print("Git Push")
 
 s.close()

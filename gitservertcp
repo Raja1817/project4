@@ -1,15 +1,16 @@
 import socket
 import ujson
 
-s=socket.socket()
+
+s1=socket.socket()
 print("socket created in server side")
 port= 1200
-s.bind(('',port) )
+s1.bind(('',port) )
 print("socket binded to the port 1200")
-s.listen()
+s1.listen()
 
 while True:
-    c, addr =s.accept()
+    c, addr =s1.accept()
     print("got connection from {}".format(addr))
     data =ujson.loads(c.recv(1024).decode('utf-8'))
     print("received {}".format(data))
