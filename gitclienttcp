@@ -10,10 +10,8 @@ s.send(ujson.dumps('12').encode('utf-8'))
 d = ujson.loads(s.recv(1024).decode('utf-8'))  
 print("received {} ".format(d))
 print("Thank you")
-<<<<<<< HEAD
-
 print("Git merge")
-=======
+
 print("Git Push")
->>>>>>> refs/remotes/origin/master
+
 s.close()
