@@ -2,10 +2,10 @@ import socket
 import ujson
 
 s=socket.socket()
-print("socket created in server side")
-port= 1200
+print("socket created")
+port= 3000
 s.bind(('',port) )
-print("socket binded to the port 1200")
+print("socket binded to the port 3000")
 s.listen()
 
 while True:
